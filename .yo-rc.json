@@ -3,19 +3,19 @@
     "promptValues": {
       "nativeLanguage": "en"
     },
-    "namespace": "MyCompany",
+    "namespace": "lab",
     "databaseType": "sqllite",
     "authenticationType": "jwt",
     "prodDatabaseType": "mysql",
     "jhipsterVersion": "6.10.1",
     "applicationType": "monolith",
-    "baseName": "jhipster",
+    "baseName": "library",
     "useSass": true,
     "clientPackageManager": "npm",
     "clientFramework": "angularX",
     "clientTheme": "none",
     "clientThemeVariant": "",
-    "creationTimestamp": 1597783430481,
+    "creationTimestamp": 1599804014687,
     "testFrameworks": [],
     "jhiPrefix": "jhi",
     "entitySuffix": "",
@@ -28,7 +28,7 @@
     ],
     "enableTranslation": true,
     "nativeLanguage": "en",
-    "languages": ["en"],
+    "languages": ["en", "es"],
     "blueprints": [
       {
         "name": "generator-jhipster-dotnetcore",

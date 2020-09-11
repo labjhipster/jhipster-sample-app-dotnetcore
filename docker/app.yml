@@ -1,6 +1,6 @@
 version: '2'
 services:
-  jhipster-app:
-    image: jhipster
+  library-app:
+    image: library
     ports:
       - 80:80

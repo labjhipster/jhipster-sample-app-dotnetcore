@@ -1,4 +1,4 @@
-# jhipster
+# library
 
 This application was generated using JHipster 6.10.1 and JHipster .Net Core 1.1.1, you can find documentation and help at [https://www.jhipster.tech/documentation-archive/v6.10.1](https://www.jhipster.tech/documentation-archive/v6.10.1).
 
@@ -12,7 +12,7 @@ Before you can build this project, you must install and configure the following 
 After installing Node, you should be able to run the following command to install development tools.
 You will only need to run this command when dependencies change in [package.json](package.json).
 
-In ./src/Jhipster/ClientApp run
+In ./src/Library/ClientApp run
 
     npm install
 
@@ -21,14 +21,14 @@ We use npm scripts and [Webpack][] as our build system.
 Run the following commands in two separate terminals to create a blissful development experience where your browser
 auto-refreshes when files change on your hard drive.
 
-    dotnet run --verbosity normal --project ./src/Jhipster/Jhipster.csproj
-    npm --prefix ./src/Jhipster/ClientApp start
+    dotnet run --verbosity normal --project ./src/Library/Library.csproj
+    npm --prefix ./src/Library/ClientApp start
 
 npm is also used to manage CSS and JavaScript dependencies used in this application. You can upgrade dependencies by
 specifying a newer version in [package.json](package.json). You can also run `npm update` and `npm install` to manage dependencies.
 Add the `help` flag on any command to see how you can use it. For example, `npm help update`.
 
-The `npm --prefix ./src/Jhipster/ClientApp run` command will list all of the scripts available to run for this project.
+The `npm --prefix ./src/Library/ClientApp run` command will list all of the scripts available to run for this project.
 
 ### Service workers
 
@@ -52,20 +52,20 @@ Note: workbox creates the respective service worker and dynamically generate the
 
 For example, to add [Leaflet][] library as a runtime dependency of your application, you would run following command:
 
-    npm --prefix ./src/Jhipster/ClientApp install --save --save-exact leaflet
+    npm --prefix ./src/Library/ClientApp install --save --save-exact leaflet
 
 To benefit from TypeScript type definitions from [DefinitelyTyped][] repository in development, you would run following command:
 
-    npm --prefix ./src/Jhipster/ClientApp install --save-dev --save-exact @types/leaflet
+    npm --prefix ./src/Library/ClientApp install --save-dev --save-exact @types/leaflet
 
 Then you would import the JS and CSS files specified in library's installation instructions so that [Webpack][] knows about them:
-Edit [Jhipster/ClientApp/app/vendor.ts](Jhipster/ClientApp/app/vendor.ts) file:
+Edit [Library/ClientApp/app/vendor.ts](Library/ClientApp/app/vendor.ts) file:
 
 ```
 import 'leaflet/dist/leaflet.js';
 ```
 
-Edit [Jhipster/ClientApp/content/css/vendor.css](Jhipster/ClientApp/content/css/vendor.css) file:
+Edit [Library/ClientApp/content/css/vendor.css](Library/ClientApp/content/css/vendor.css) file:
 
 ```
 @import '~leaflet/dist/leaflet.css';
@@ -85,19 +85,19 @@ For example, the following command:
 
 will generate few files:
 
-    create Jhipster/ClientApp/src/app/my-component/my-component.component.html
-    create Jhipster/ClientApp/src/app/my-component/my-component.component.ts
-    update Jhipster/ClientApp/src/app/app.module.ts
+    create Library/ClientApp/src/app/my-component/my-component.component.html
+    create Library/ClientApp/src/app/my-component/my-component.component.ts
+    update Library/ClientApp/src/app/app.module.ts
 
 ## Building for production
 
-To build the arifacts and optimize the jhipster application for production, run:
+To build the arifacts and optimize the library application for production, run:
 
-    cd ./src/Jhipster
-    rm -rf ./src/Jhipster/wwwroot
-    dotnet publish --verbosity normal -c Release -o ./app/out ./Jhipster.csproj
+    cd ./src/Library
+    rm -rf ./src/Library/wwwroot
+    dotnet publish --verbosity normal -c Release -o ./app/out ./Library.csproj
 
-The `./src/Jhipster/app/out` directory will contain your application dll and its depedencies.
+The `./src/Library/app/out` directory will contain your application dll and its depedencies.
 
 This will concatenate and minify the client CSS and JavaScript files. It will also modify `index.html` so it references these new files.
 
@@ -129,7 +129,7 @@ Manually :
 
 `dotnet tool install --global dotnet-sonarscanner`
 
-3. Run `` dotnet sonarscanner begin /d:sonar.login=admin /d:sonar.password=admin /k:"Jhipster" /d:sonar.host.url="http://localhost:9001" /s:"`pwd`/SonarQube.Analysis.xml" ``
+3. Run `` dotnet sonarscanner begin /d:sonar.login=admin /d:sonar.password=admin /k:"Library" /d:sonar.host.url="http://localhost:9001" /s:"`pwd`/SonarQube.Analysis.xml" ``
 
 4. Build your application : `dotnet build`
 
@@ -153,11 +153,11 @@ Manually :
 
 You can also fully dockerize your application and all the services that it depends on. To achieve this, first build a docker image of your app by running:
 
-    docker build -f ./src/Jhipster/Dockerfile -t jhipster .
+    docker build -f ./src/Library/Dockerfile -t library .
 
 Then run:
 
-    docker run -p 80:80 jhipster
+    docker run -p 80:80 library
 
 [node.js]: https://nodejs.org/
 [yarn]: https://yarnpkg.org/
